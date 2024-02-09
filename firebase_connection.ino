@@ -15,11 +15,11 @@ void setup()
   Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
   Firebase.reconnectWiFi(true);
   Serial.println("Wifi connected..........");
-
+  
   Firebase.setInt(firebaseData, "/DATA", 1);
-
+  
   Serial.println("Database conneced.......");
-  pinMode(LED, OUTPUT);
+  pinMode(LED,OUTPUT);
 
 }
 
@@ -28,16 +28,16 @@ void loop()
 {
   int test = Firebase.getInt(firebaseData, "/DATA");
   if (test == 1) {
-    digitalWrite(LED, HIGH);
+    digitalWrite(LED,HIGH);
     Serial.println("LED is ON");
     delay(1000);
     Firebase.setInt(firebaseData, "/DATA", 0);
   }
-  digitalWrite(LED, LOW);
-  Serial.println("LED is OFF");
-  Firebase.setInt(firebaseData, "/DATA", 1);
-  delay(1000);
-  //    Serial.println((Firebase.getInt(firebaseData, "/DATA")));
-  //    Serial.println((Firebase.setString(firebaseData, "/DATA", "test")));
+    digitalWrite(LED,LOW);
+    Serial.println("LED is OFF");
+    delay(1000);
+    Firebase.setInt(firebaseData, "/DATA", 1);
+//    Serial.println((Firebase.getInt(firebaseData, "/DATA")));
+//    Serial.println((Firebase.setString(firebaseData, "/DATA", "test")));
 
 }

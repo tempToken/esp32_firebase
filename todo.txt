@@ -1,0 +1,4 @@
+1. firebase connectivity - done
+2. time calibration - done
+3. get user bssid - done
+4. upload data on firebase

@@ -1,5 +1,4 @@
 #include <WiFi.h>
-
 #include <FirebaseESP32.h>
 
 #define FIREBASE_HOST "https://esp32-73a15-default-rtdb.firebaseio.com/"
